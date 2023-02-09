@@ -8,7 +8,11 @@ import {environment} from "../../../environments/environment";
 export class CartsService {
 
   constructor(private http:HttpClient) { }
-   createNewCart(Model:any){
-    return this.http.post(environment.baseApi+'carts',Model)
-   }
+
+  getAllCarts() {
+    return this.http.get(environment.baseApi + 'carts');
+  }
+
+
+
 }
