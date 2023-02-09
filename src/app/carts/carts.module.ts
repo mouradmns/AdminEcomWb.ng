@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CartComponent } from './components/cart/cart.component';
 import {MatCardModule} from "@angular/material/card";
 import {MatLegacyButtonModule} from "@angular/material/legacy-button";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 
 
@@ -15,7 +15,8 @@ import {FormsModule} from "@angular/forms";
         CommonModule,
         MatCardModule,
         MatLegacyButtonModule,
-        FormsModule
+        FormsModule,
+        ReactiveFormsModule
     ]
 })
 export class CartsModule {

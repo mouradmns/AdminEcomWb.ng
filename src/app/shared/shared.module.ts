@@ -6,6 +6,7 @@ import {RouterModule} from "@angular/router";
 import {BrowserModule} from "@angular/platform-browser";
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { SelectComponent } from './components/select/select.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 
@@ -16,12 +17,14 @@ import { SelectComponent } from './components/select/select.component';
     SelectComponent,
   ],
   imports: [
+    ReactiveFormsModule,
     CommonModule,
     BrowserModule,
     HttpClientModule,
     RouterModule
   ],
   exports: [
+    ReactiveFormsModule,
     HeaderComponent,
     SpinnerComponent,
     SelectComponent
