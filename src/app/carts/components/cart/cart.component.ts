@@ -23,8 +23,21 @@ export class CartComponent implements OnInit {
 getAllCarts() {
     this.service.getAllCarts().subscribe((res:any) => {
       this.carts=res;
-     console.log(this.carts)
     });
   }
 
+  applyFilter() {
+    let date=this.form.value
+    this.service.getAllCarts(date).subscribe((res:any) => {
+      this.carts=res;
+       console.log(this.carts)
+    })
+  }
+
+  deleteCart(id:number) {
+  this.service.deleteCart(id).subscribe((res:any) => {
+     this.getAllCarts()
+    alert( "cart Deleted Success")
+  })
+  }
 }
